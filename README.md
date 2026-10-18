@@ -51,3 +51,31 @@ Repository: `devops-24ESKCS074`
 
 ```bash
 node pages/Chaitanya/server.js
+
+## Live Deployment
+
+PetPal is deployed on Render and can be accessed here:
+
+- **Live Website:** https://petpal-s0o0.onrender.com
+- **Health Check:** https://petpal-s0o0.onrender.com/health
+- **Prometheus Metrics:** https://petpal-s0o0.onrender.com/metrics
+
+## Kubernetes Deployment
+
+Kubernetes deployment files are available in the `k8s/` directory.
+
+- `k8s/deployment.yaml` — Deploys two PetPal replicas.
+- `k8s/service.yaml` — Exposes the application through a Kubernetes Service.
+
+To check the deployment status:
+
+```bash
+kubectl get pods
+kubectl get services
+```
+
+## Monitoring
+
+- Prometheus configuration: `monitoring/prometheus.yml`
+- Grafana dashboard: `monitoring/petpal-dashboard.json`
+- Dashboard screenshot: `monitoring/dashboard.png`

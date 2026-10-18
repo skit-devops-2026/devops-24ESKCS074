@@ -1,0 +1,10 @@
+
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: "petpal"
+    metrics_path: "/metrics"
+    scheme: https
+    static_configs:
+      - targets: ["petpal-s0o0.onrender.com"]
