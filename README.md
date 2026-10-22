@@ -52,7 +52,8 @@ Repository: `devops-24ESKCS074`
 ```bash
 node pages/Chaitanya/server.js
 
-## Live Deployment
+## Live URL
+https://petpal-s0o0.onrender.com
 
 PetPal is deployed on Render and can be accessed here:
 
