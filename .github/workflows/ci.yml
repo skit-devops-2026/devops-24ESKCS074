@@ -1,3 +1,4 @@
+
 name: PetPal CI
 
 on:
@@ -5,18 +6,35 @@ on:
   pull_request:
 
 jobs:
-  test:
+  hygiene:
     runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
+      - name: Run hygiene check
+        run: bash scripts/hygiene.sh
+
+  build-and-test:
+    runs-on: ubuntu-latest
+    needs: hygiene
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
-          cache: npm
+          node-version: 24
 
-      - name: Run automated tests
-        run: npm test
+      - name: Install dependencies
+        run: make install
+
+      - name: Run tests
+        run: make test
+
+      - name: Build
+        run: make build

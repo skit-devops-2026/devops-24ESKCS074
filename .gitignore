@@ -1,7 +1,8 @@
+
 # Dependencies
 node_modules/
 
-# Environment / secrets
+# Environment files and secrets
 .env
 .env.*
 !.env.example
@@ -15,8 +16,10 @@ coverage/
 *.log
 npm-debug.log*
 
-# OS / editor files
+# OS files
 .DS_Store
 Thumbs.db
+
+# Editor files
 .vscode/
 .idea/
