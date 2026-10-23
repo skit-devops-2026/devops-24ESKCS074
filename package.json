@@ -1,0 +1,9 @@
+{
+  "name": "petpal",
+  "version": "1.0.0",
+  "private": true,
+  "description": "PetPal pet-care management web application",
+  "scripts": {
+    "test": "node --test"
+  }
+}
