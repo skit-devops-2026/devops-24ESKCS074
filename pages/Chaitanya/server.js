@@ -19,30 +19,66 @@ const MIME_TYPES = {
 };
 
 const server = http.createServer((req, res) => {
-  let reqPath = req.url.split('?')[0];
-  if (reqPath === '/') reqPath = '/index.html';
+  const reqPath = req.url.split('?')[0];
 
-  const filePath = path.join(BASE_DIR, reqPath);
+  // Health check endpoint
+  if (reqPath === '/health') {
+    res.writeHead(200, {
+      'Content-Type': 'application/json; charset=utf-8'
+    });
+    res.end(JSON.stringify({ status: 'healthy' }));
+    return;
+  }
+
+  // Prometheus metrics endpoint
+  if (reqPath === '/metrics') {
+    res.writeHead(200, {
+      'Content-Type': 'text/plain; version=0.0.4; charset=utf-8'
+    });
+    res.end(
+      '# HELP petpal_up Whether the PetPal server is running\n' +
+      '# TYPE petpal_up gauge\n' +
+      'petpal_up 1\n'
+    );
+    return;
+  }
+
+  // Serve the homepage
+  let fileReqPath = reqPath;
+if (reqPath === '/') {
+  fileReqPath = '/index.html';
+}
+
+  const filePath = path.join(BASE_DIR, fileReqPath);
   const ext = path.extname(filePath).toLowerCase();
-  const contentType = MIME_TYPES[ext] || 'application/octet-stream';
+  const contentType =
+    MIME_TYPES[ext] || 'application/octet-stream';
 
   fs.readFile(filePath, (err, content) => {
     if (err) {
       if (err.code === 'ENOENT') {
-        res.writeHead(404, { 'Content-Type': 'text/plain' });
+        res.writeHead(404, {
+          'Content-Type': 'text/plain; charset=utf-8'
+        });
         res.end('404 Not Found');
       } else {
-        res.writeHead(500, { 'Content-Type': 'text/plain' });
+        res.writeHead(500, {
+          'Content-Type': 'text/plain; charset=utf-8'
+        });
         res.end(`Server Error: ${err.code}`);
       }
     } else {
-      res.writeHead(200, { 'Content-Type': contentType });
+      res.writeHead(200, {
+        'Content-Type': contentType
+      });
       res.end(content);
     }
   });
 });
 
 server.listen(PORT, () => {
-  console.log(`🐾 PetPal is running locally at: http://localhost:${PORT}`);
+  console.log(
+    `🐾 PetPal is running locally at: http://localhost:${PORT}`
+  );
   console.log(`Press Ctrl+C in terminal to stop.`);
 });

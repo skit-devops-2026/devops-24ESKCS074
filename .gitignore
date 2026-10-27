@@ -1,9 +1,8 @@
-
 # Dependencies
 node_modules/
 **/node_modules/
 
-# Environment variables and credentials
+# Environment variables and secrets
 .env
 .env.*
 **/.env
@@ -20,6 +19,15 @@ coverage/
 *.log
 npm-debug.log*
 
-# Local files
+# Local editor files
 .DS_Store
 .vscode/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Temporary files
+*.tmp
