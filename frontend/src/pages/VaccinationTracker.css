@@ -1,0 +1,162 @@
+
+/* Vaccination Tracker */
+
+.vaccination-section {
+  margin-top: 30px;
+  color: #254537;
+}
+
+.vaccination-heading {
+  margin-bottom: 20px;
+}
+
+.vaccination-heading h2 {
+  color: #254537;
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.vaccination-heading p {
+  color: #627267;
+}
+
+.vaccination-card {
+  background: white;
+  padding: 24px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 12px #00000010;
+}
+
+.vaccination-card h3 {
+  color: #254537;
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+.vaccination-card form {
+  display: grid;
+  gap: 15px;
+}
+
+.vaccination-card label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #254537;
+}
+
+.vaccination-card input,
+.vaccination-card textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d7d0c1;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  background: #fffdf8;
+  color: #254537;
+  box-sizing: border-box;
+}
+
+.vaccination-card input:focus,
+.vaccination-card textarea:focus {
+  outline: 2px solid #dca747;
+}
+
+.vaccination-section .vaccination-add-btn {
+  background: #dca747;
+  color: #254537;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.vaccination-section .vaccination-add-btn:hover {
+  background: #e9b959;
+}
+
+.vaccination-section .vaccination-add-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.vaccination-record {
+  background: #f9f6ed;
+  padding: 18px;
+  border: 1px solid #e7dfcc;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.vaccination-record-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.vaccination-record-top h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #254537;
+}
+
+.vaccination-record p {
+  margin: 9px 0;
+  color: #42594b;
+}
+
+.vaccination-status {
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+.vaccination-status.upcoming {
+  background: #dceee0;
+  color: #27613b;
+}
+
+.vaccination-status.overdue {
+  background: #f9dede;
+  color: #ae3030;
+}
+
+.vaccination-status.due-today {
+  background: #fff0c9;
+  color: #8c6300;
+}
+
+.vaccination-status.no-due-date {
+  background: #e8e8e8;
+  color: #555;
+}
+
+.vaccination-section .vaccination-delete-btn {
+  background: #fbe8e6;
+  color: #a12e2e;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.vaccination-section .vaccination-delete-btn:hover {
+  background: #f5ceca;
+}
+
+.vaccination-message {
+  color: #254537;
+  font-weight: 600;
+}
