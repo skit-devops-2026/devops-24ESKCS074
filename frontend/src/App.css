@@ -1,0 +1,938 @@
+
+/* NAVBAR */
+
+.navbar {
+  background: #fffdf8;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h2 {
+  color: #254537;
+  margin: 0;
+  font-family: Georgia, serif;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: #254537;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* MAIN LAYOUT */
+
+.container {
+  padding: 40px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.welcome {
+  background: #254537;
+  color: white;
+  padding: 50px;
+  border-radius: 25px;
+}
+
+.welcome h1 {
+  font-family: Georgia, serif;
+  font-size: 38px;
+}
+
+/* BUTTONS */
+
+button {
+  background: #dca747;
+  color: #254537;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+/* MY PETS */
+
+#pets {
+  margin-top: 40px;
+}
+
+#pets h2 {
+  font-family: Georgia, serif;
+  color: #254537;
+  font-size: 30px;
+}
+
+.pet-form {
+  background: #fffdf8;
+  padding: 25px;
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 25px;
+  align-items: center;
+}
+
+.pet-form input,
+.pet-form select {
+  padding: 13px;
+  border: 1px solid #ddd3bc;
+  border-radius: 10px;
+  font-size: 15px;
+  background: white;
+  color: #254537;
+}
+
+.pet-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.pet-card {
+  background: #fffdf8;
+  padding: 25px;
+  border: 1px solid #e3d8be;
+  border-radius: 20px;
+  min-width: 250px;
+  text-align: center;
+}
+
+.pet-card h3 {
+  color: #254537;
+  font-family: Georgia, serif;
+  font-size: 24px;
+}
+
+.pet-card p {
+  color: #526459;
+}
+
+.pet-card button {
+  margin: 5px;
+}
+
+/* OPTIONAL PHOTO UPLOAD */
+
+.photo-upload {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.photo-upload label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.photo-upload input {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.pet-photo {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #dca747;
+  margin-bottom: 15px;
+}
+
+.pet-placeholder {
+  width: 130px;
+  height: 130px;
+  background: #f6f1e3;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  margin: 0 auto 15px;
+}
+
+.pet-card .pet-photo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  .welcome {
+    padding: 30px;
+  }
+
+  .welcome h1 {
+    font-size: 28px;
+  }
+
+  .pet-card {
+    width: 100%;
+  }
+}
+
+/* LOGIN AND REGISTRATION */
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  background: #f6f1e3;
+}
+
+.auth-card {
+  background: #fffdf8;
+  width: 100%;
+  max-width: 420px;
+  padding: 35px;
+  border-radius: 25px;
+  border: 1px solid #e3d8be;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+.auth-card h1,
+.auth-card h2 {
+  color: #254537;
+  font-family: Georgia, serif;
+}
+
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.auth-card input {
+  padding: 14px;
+  border: 1px solid #ddd3bc;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.auth-card form button {
+  margin-top: 10px;
+}
+
+.auth-message {
+  color: #a33d35;
+  font-size: 14px;
+}
+
+.auth-switch {
+  background: transparent;
+  color: #254537;
+  font-weight: bold;
+  text-decoration: underline;
+  padding: 8px;
+}
+
+/* DAILY CARE */
+
+.care-page {
+  margin-top: 30px;
+}
+
+.care-top {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 25px;
+  margin-bottom: 35px;
+}
+
+.care-hero {
+  background: #254537;
+  color: white;
+  padding: 40px;
+  border-radius: 28px;
+}
+
+.care-hero h1 {
+  font-family: Georgia, serif;
+  font-size: 36px;
+  line-height: 1.3;
+}
+
+.care-hero h1 span {
+  color: #dca747;
+}
+
+.care-hero p {
+  line-height: 1.6;
+}
+
+.care-hero label {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.care-hero select {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  min-width: 180px;
+}
+
+.care-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.care-progress {
+  background: #fffdf8;
+  border: 1px solid #e3d8be;
+  border-radius: 28px;
+  padding: 35px;
+}
+
+.care-progress h2 {
+  font-family: Georgia, serif;
+  color: #254537;
+}
+
+.care-progress h1 {
+  color: #254537;
+  font-size: 45px;
+}
+
+.progress-bar {
+  height: 15px;
+  background: #e3d8be;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 30px;
+}
+
+.progress-bar div {
+  height: 100%;
+  background: #dca747;
+  border-radius: 20px;
+  transition: width 0.3s;
+}
+
+.care-page > h2 {
+  font-family: Georgia, serif;
+  color: #254537;
+  margin-bottom: 20px;
+}
+
+.care-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.care-card {
+  background: #fffdf8;
+  border: 1px solid #e3d8be;
+  border-radius: 25px;
+  padding: 30px;
+}
+
+.care-card h2 {
+  font-family: Georgia, serif;
+  color: #254537;
+}
+
+.care-card p {
+  color: #526459;
+}
+
+.care-card button {
+  margin-top: 15px;
+}
+
+.care-card button:disabled,
+.care-actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .care-top {
+    grid-template-columns: 1fr;
+  }
+
+  .care-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .care-hero {
+    padding: 25px;
+  }
+
+  .care-hero h1 {
+    font-size: 28px;
+  }
+}
+
+/* SMART WALK TRACKER */
+
+.walk-page {
+  margin-top: 30px;
+}
+
+.walk-hero {
+  background: #254537;
+  color: white;
+  padding: 35px;
+  border-radius: 25px;
+  margin-bottom: 25px;
+}
+
+.walk-hero h1 {
+  font-family: Georgia, serif;
+  font-size: 36px;
+}
+
+.walk-hero label {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.walk-hero select {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+}
+
+.walk-timer-card {
+  background: #fffdf8;
+  border: 1px solid #e3d8be;
+  padding: 35px;
+  border-radius: 25px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.walk-clock {
+  font-size: 55px;
+  color: #254537;
+  font-family: Arial, sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+
+.walk-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.walk-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.walk-stat {
+  background: #fffdf8;
+  border: 1px solid #e3d8be;
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+}
+
+.walk-stat h2 {
+  font-size: 30px;
+  color: #254537;
+}
+
+.walk-history {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.walk-history-card {
+  background: #fffdf8;
+  border: 1px solid #e3d8be;
+  border-radius: 20px;
+  padding: 25px;
+}
+
+.laptop-only {
+  display: block;
+  margin-top: 25px;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .walk-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .walk-history {
+    grid-template-columns: 1fr;
+  }
+
+  .walk-clock {
+    font-size: 40px;
+  }
+
+  .walk-hero {
+    padding: 25px;
+  }
+
+  .laptop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+    margin-top: 20px;
+  }
+}
+
+/* WALK QR HANDOFF */
+
+.qr-box {
+  background: #f6f1e3;
+  padding: 25px;
+  border-radius: 20px;
+  margin: 20px auto;
+  max-width: 350px;
+  text-align: center;
+  border: 1px solid #e3d8be;
+}
+
+.qr-box h3 {
+  color: #254537;
+  font-family: Georgia, serif;
+}
+
+.walk-qr {
+  width: 220px;
+  height: 220px;
+  max-width: 100%;
+  margin: 15px auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.qr-box p {
+  color: #526459;
+  font-size: 14px;
+}
+
+
+/* PHONE WALK HANDOFF */
+
+.phone-walk {
+  min-height: 100vh;
+  background: #f6f1e3;
+  padding: 30px 15px;
+  text-align: center;
+}
+
+.phone-walk h1 {
+  color: #254537;
+  font-family: Georgia, serif;
+}
+
+.phone-walk-card {
+  background: #fffdf8;
+  border: 1px solid #e3d8be;
+  border-radius: 25px;
+  padding: 30px;
+  max-width: 450px;
+  margin: 30px auto;
+}
+
+.phone-walk-card h2 {
+  color: #254537;
+  font-family: Georgia, serif;
+}
+
+.phone-walk-card p {
+  color: #526459;
+  line-height: 1.7;
+}
+
+.phone-walk-card button {
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* MOBILE GPS TRACKER */
+
+.gps-distance {
+  font-size: 42px;
+  color: #254537;
+  font-family: Georgia, serif;
+  margin: 15px 0;
+}
+
+.gps-message {
+  background: #f6f1e3;
+  border-radius: 12px;
+  padding: 12px;
+  margin-top: 20px;
+  color: #254537;
+}
+
+.phone-walk-card .walk-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.phone-walk-card .walk-buttons button {
+  width: 100%;
+}
+
+/* PetPal Health Manager buttons */
+
+.health-btn {
+  background: #254537;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.health-btn:hover {
+  background: #37634e;
+  transform: translateY(-2px);
+}
+
+.health-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.health-btn-gold {
+  background: #dca747;
+  color: #254537;
+}
+
+.health-btn-gold:hover {
+  background: #edbc60;
+}
+
+.health-btn-delete {
+  background: #fbe8e6;
+  color: #a12e2e;
+}
+
+.health-btn-delete:hover {
+  background: #f5ceca;
+}
+
+
+/* PetPal Navigation */
+
+.petpal-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 15px 20px;
+}
+
+.petpal-nav button {
+  background: transparent;
+  color: #254537;
+  border: none;
+  border-radius: 10px;
+  padding: 11px 15px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.2s ease;
+}
+
+.petpal-nav button:hover {
+  background: #f3e7c9;
+}
+
+.petpal-nav button.active {
+  background: #dca747;
+  color: #254537;
+}
+
+.petpal-nav .logout-btn {
+  border: 1px solid #254537;
+  background: transparent;
+  color: #254537;
+}
+
+.petpal-nav .logout-btn:hover {
+  background: #254537;
+  color: white;
+}
+
+/* ===== PETPAL NAVIGATION FIX ===== */
+
+.petpal-navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 20px;
+  background: #fffdf8;
+}
+
+.petpal-navbar .petpal-logo {
+  margin: 0;
+  color: #254537;
+  font-size: 34px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.petpal-navbar .petpal-nav-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.petpal-navbar .petpal-nav-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  min-width: 0;
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 9px;
+  background: transparent;
+  color: #254537;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.petpal-navbar .petpal-nav-item:hover {
+  background: #f3e6c6;
+  color: #254537;
+  transform: none;
+}
+
+.petpal-navbar .petpal-nav-item.selected {
+  background: #dca747;
+  color: #254537;
+}
+
+.petpal-navbar .petpal-nav-item.petpal-logout {
+  border: 1px solid #254537;
+  background: transparent;
+  color: #254537;
+}
+
+.petpal-navbar .petpal-nav-item.petpal-logout:hover {
+  background: #254537;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .petpal-navbar {
+    padding: 18px 12px;
+  }
+
+  .petpal-navbar .petpal-logo {
+    font-size: 28px;
+  }
+
+  .petpal-navbar .petpal-nav-links {
+    gap: 5px;
+  }
+
+  .petpal-navbar .petpal-nav-item {
+    padding: 9px 10px;
+    font-size: 13px;
+  }
+}
+
+.vet-section {
+  margin-top: 30px;
+  color: #254537;
+}
+
+.vet-heading {
+  margin-bottom: 20px;
+}
+
+.vet-heading h2 {
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.vet-heading p {
+  color: #627267;
+}
+
+.vet-card {
+  background: white;
+  padding: 24px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 12px #00000010;
+}
+
+.vet-card h3 {
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+.vet-card form {
+  display: grid;
+  gap: 15px;
+}
+
+.vet-card label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.vet-card input,
+.vet-card textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d7d0c1;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font: inherit;
+  background: #fffdf8;
+  color: #254537;
+}
+
+.vet-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.vet-section .vet-actions button {
+  width: auto;
+  margin: 0;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 9px;
+  background: #254537;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.vet-section .vet-actions button:hover {
+  background: #37634e;
+}
+
+.vet-section .vet-actions .vet-save-btn {
+  background: #dca747;
+  color: #254537;
+}
+
+.vet-section .vet-actions .vet-save-btn:hover {
+  background: #edbc60;
+}
+
+.vet-section .vet-actions .vet-cancel-btn {
+  background: #ede6d9;
+  color: #254537;
+}
+
+.vet-section .vet-actions .vet-delete-btn {
+  background: #fbe8e6;
+  color: #a12e2e;
+}
+
+.vet-record {
+  padding: 18px;
+  margin-bottom: 12px;
+  border: 1px solid #e7dfcc;
+  border-radius: 12px;
+  background: #f9f6ed;
+}
+
+.vet-record-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.vet-record-top h4 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.vet-record p {
+  margin: 9px 0;
+}
+
+.vet-status {
+  background: #e2ebdf;
+  color: #254537;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.vet-message {
+  color: #254537;
+  font-weight: 600;
+}

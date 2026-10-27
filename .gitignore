@@ -1,12 +1,17 @@
+
 # Dependencies
 node_modules/
+**/node_modules/
 
-# Environment / secrets
+# Environment variables and credentials
 .env
 .env.*
+**/.env
+**/.env.*
 !.env.example
+!**/.env.example
 
-# Build and coverage artifacts
+# Build output
 dist/
 build/
 coverage/
@@ -15,8 +20,6 @@ coverage/
 *.log
 npm-debug.log*
 
-# OS / editor files
+# Local files
 .DS_Store
-Thumbs.db
 .vscode/
-.idea/

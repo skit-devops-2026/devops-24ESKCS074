@@ -1,0 +1,93 @@
+
+.vet-section {
+  margin-top: 30px;
+  color: #254537;
+}
+
+.vet-heading {
+  margin-bottom: 20px;
+}
+
+.vet-card {
+  background: white;
+  padding: 24px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 12px #00000010;
+}
+
+.vet-card form {
+  display: grid;
+  gap: 15px;
+}
+
+.vet-card label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.vet-card input,
+.vet-card textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d7d0c1;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+.vet-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.vet-section .vet-actions button {
+  width: auto;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 9px;
+  background: #254537;
+  color: white;
+  cursor: pointer;
+}
+
+.vet-section .vet-actions .vet-save-btn {
+  background: #dca747;
+  color: #254537;
+}
+
+.vet-section .vet-actions .vet-delete-btn {
+  background: #fbe8e6;
+  color: #a12e2e;
+}
+
+.vet-record {
+  background: #f9f6ed;
+  padding: 18px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.vet-record-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.vet-status {
+  background: #e2ebdf;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.vet-message {
+  color: #254537;
+  font-weight: 600;
+}
